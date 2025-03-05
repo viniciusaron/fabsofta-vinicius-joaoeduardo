@@ -16,4 +16,3 @@
 ### Instalação
 [Git Bash] (https://git-scm.com/downloads)
 
-### Configuração inicial
