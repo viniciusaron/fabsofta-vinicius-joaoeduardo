@@ -67,3 +67,13 @@ git checkout -b branch-seunome
   - Máquina virtual do Java - interpreta o Bytecode(.class) do Java para linguagem de máquina
 - JDK - Java Development Kit (javac.exe)
   - Compilar o código Java em bytecode (.class)
+
+
+### Criação de projeto no VSCode com Maven
+1) teclar F1
+2) digitar Java e escolher a opção create ne java project
+3) project type: MAVEN
+4) Archetype: no Archetype
+5) pacote digitar domínio ao contrário ex: br.univille
+6) nome do projeto em minúsculo
+7) usar a pasta sugerida pelo VSCode
