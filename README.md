@@ -1,5 +1,9 @@
 # Fabrica de Software 2025/1
 
+## Nome da Equipe
+- João Eduardo
+- Vinicius Aron
+
 ## Proposta de projetos
 
 - Nome do sistema: Sistema de gerenciamento de estoque para empresa de venda de pneu
@@ -17,3 +21,4 @@
 [Git Bash] (https://git-scm.com/downloads)
 
 ### Configuração inicial
+
