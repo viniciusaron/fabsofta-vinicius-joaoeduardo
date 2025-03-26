@@ -77,3 +77,6 @@ git checkout -b branch-seunome
 5) pacote digitar domínio ao contrário ex: br.univille
 6) nome do projeto em minúsculo
 7) usar a pasta sugerida pelo VSCode
+
+### Site sobre Design Patterns
+https://refactoring.guru/design-patterns

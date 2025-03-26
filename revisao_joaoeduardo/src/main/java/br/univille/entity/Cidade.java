@@ -2,9 +2,9 @@ package br.univille.entity;
 
 public class Cidade {
     private long id;
-    private String nome; 
+    private String nome;
     private String estado;
-
+    
     public long getId() {
         return id;
     }
@@ -24,4 +24,5 @@ public class Cidade {
         this.estado = estado;
     }
 
+    
 }
