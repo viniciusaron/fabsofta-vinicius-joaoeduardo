@@ -1,0 +1,72 @@
+@startuml
+package br.univille.projfabsoft.entity {
+    class Cliente {
+        - Long id
+        - String nome
+        - String cpf
+        - String email
+        - String telefone
+        - String endereco
+        --
+        + Long getId()
+        + void setId(Long id)
+        + String getNome()
+        + void setNome(String nome)
+        + String getCpf()
+        + void setCpf(String cpf)
+        + String getEmail()
+        + void setEmail(String email)
+        + String getTelefone()
+        + void setTelefone(String telefone)
+        + String getEndereco()
+        + void setEndereco(String endereco)
+    }
+
+    class Produto {
+        - Long id
+        - String fabricante
+        - String largura
+        - String perfil
+        - String tamanhoAro
+        - String tipoConstrucao
+        --
+        + Long getId()
+        + void setId(Long id)
+        + String getFabricante()
+        + void setFabricante(String fabricante)
+        + String getLargura()
+        + void setLargura(String largura)
+        + String getPerfil()
+        + void setPerfil(String perfil)
+        + String getTamanhoAro()
+        + void setTamanhoAro(String tamanhoAro)
+        + String getTipoConstrucao()
+        + void setTipoConstrucao(String tipoConstrucao)
+    }
+
+    class Funcionario {
+        - Long id
+        - String nome
+        - String cpf
+        - String email
+        - String telefone
+        - String endereco
+        - String cargo
+        --
+        + Long getId()
+        + void setId(Long id)
+        + String getNome()
+        + void setNome(String nome)
+        + String getCpf()
+        + void setCpf(String cpf)
+        + String getEmail()
+        + void setEmail(String email)
+        + String getTelefone()
+        + void setTelefone(String telefone)
+        + String getEndereco()
+        + void setEndereco(String endereco)
+        + String getCargo()
+        + void setCargo(String cargo)
+    }
+}
+@enduml
