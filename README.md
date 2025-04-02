@@ -80,3 +80,21 @@ git checkout -b branch-seunome
 
 ### Site sobre Design Patterns
 https://refactoring.guru/design-patterns
+
+### Diagrama de classes
+![Diagrama de Classes](./diagramas/png/classes.png)
+
+### Criar as entidades
+```bash
+@workspace #sym:## Histórias de Usuário por favor, encontre as entidades
+```
+
+### Gerar as classes Java das entidades
+```bash
+@workspace por favor, gere no pacote br.univille.projfabsoft.entity as classes java para representar as entidades
+```
+
+### Gerar o diagrama de entidades UML
+```bash
+@workspace por favor, gere um diagrama uml utilizando o padrão plantuml para as classes no pacote br.univille.projfabsoft.entity
+```
