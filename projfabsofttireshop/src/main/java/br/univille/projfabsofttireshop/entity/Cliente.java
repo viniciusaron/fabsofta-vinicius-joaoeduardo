@@ -1,22 +1,30 @@
-package br.univille.projfabsoft.entity;
+package br.univille.projfabsofttireshop.entity;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(length = 1000, nullable = false)
     private String nome;
     private String cpf;
     private String email;
     private String telefone;
     private String endereco;
 
-    // Getters and Setters
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    private List<Produto> produtosComprados;
+
     public Long getId() {
         return id;
     }

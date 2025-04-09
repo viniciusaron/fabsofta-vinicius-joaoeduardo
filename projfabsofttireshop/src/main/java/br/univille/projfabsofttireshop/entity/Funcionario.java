@@ -1,15 +1,21 @@
-package br.univille.projfabsoft.entity;
+package br.univille.projfabsofttireshop.entity;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Funcionario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(length = 1000, nullable = false)
     private String nome;
     private String cpf;
     private String email;
@@ -17,7 +23,9 @@ public class Funcionario {
     private String endereco;
     private String cargo;
 
-    // Getters and Setters
+    @OneToMany(mappedBy = "funcionario", cascade = CascadeType.ALL)
+    private List<Produto> produtosGerenciados;
+
     public Long getId() {
         return id;
     }

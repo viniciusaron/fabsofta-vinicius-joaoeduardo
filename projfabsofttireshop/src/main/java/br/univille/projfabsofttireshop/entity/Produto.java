@@ -1,9 +1,11 @@
-package br.univille.projfabsoft.entity;
+package br.univille.projfabsofttireshop.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Produto {
@@ -16,7 +18,14 @@ public class Produto {
     private String tamanhoAro;
     private String tipoConstrucao;
 
-    // Getters and Setters
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
+
+    @ManyToOne
+    @JoinColumn(name = "funcionario_id")
+    private Funcionario funcionario;
+
     public Long getId() {
         return id;
     }

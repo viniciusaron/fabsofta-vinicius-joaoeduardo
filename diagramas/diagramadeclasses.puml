@@ -68,5 +68,9 @@ package br.univille.projfabsoft.entity {
         + String getCargo()
         + void setCargo(String cargo)
     }
+
+    Cliente "1" -- "0..*" Produto : "compra"
+    Funcionario "1" -- "0..*" Cliente : "atende"
+    Funcionario "1" -- "0..*" Produto : "gerencia"
 }
 @enduml
