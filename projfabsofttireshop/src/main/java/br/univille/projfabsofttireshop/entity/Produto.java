@@ -11,7 +11,7 @@ import jakarta.persistence.ManyToOne;
 public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     private String fabricante;
     private String largura;
     private String perfil;
@@ -26,11 +26,11 @@ public class Produto {
     @JoinColumn(name = "funcionario_id")
     private Funcionario funcionario;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
