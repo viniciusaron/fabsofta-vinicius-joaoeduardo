@@ -3,14 +3,29 @@ GET http://localhost:8080/api/v1/clientes
 
 
 
-### API CLIENTE GET
+### API CLIENTE POST
 POST http://localhost:8080/api/v1/clientes
 Content-Type: application/json
 
 {
     "nome": "joao",
+    "cpf": "118.459.589-50",
+    "email": "joaoeformigoni1@gmail.com",
+    "telefone": "+55 47 99770-4812",
+    "endereco": "R. Adolfo Ribeiro Padilha - 108"
+}
+
+### API CLIENTE PUT
+PUT http://localhost:8080/api/v1/clientes/1
+Content-Type: application/json
+
+{
+    "nome": "Joao Eduardo Formigoni",
     "cpf": "134.542.439-63",
     "email": "joaoeformigoni@gmail.com",
     "telefone": "+55 47 99779-4812",
     "endereco": "R. Adolfo Ribeiro Padilha - 266"
 }
+
+### API CLIENTE DELETE
+DELETE http://localhost:8080/api/v1/clientes/1
