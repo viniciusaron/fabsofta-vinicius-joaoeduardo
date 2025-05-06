@@ -1,0 +1,33 @@
+### API PRODUTO GET
+GET http://localhost:8080/api/v1/produtos
+
+### API PRODUTO POST
+POST http://localhost:8080/api/v1/produtos
+Content-Type: application/json
+
+{
+    "fabricante": "Goodyear",
+    "largura": "205",
+    "perfil": "55",
+    "diametro": "16",
+    "preco": 250.00,
+    "quantidade": 50,
+    "descricao": "Pneu para carro"
+}
+
+### API PRODUTO PUT
+PUT http://localhost:8080/api/v1/produtos/1
+Content-Type: application/json
+
+{
+    "fabricante": "Goodyear Updated",
+    "largura": "215",
+    "perfil": "60",
+    "diametro": "17",
+    "preco": 270.00,
+    "quantidade": 40,
+    "descricao": "Pneu para carro SUV"
+}
+
+### API PRODUTO DELETE
+DELETE http://localhost:8080/api/v1/produtos/1

@@ -1,0 +1,29 @@
+### API FUNCIONÁRIO GET
+GET http://localhost:8080/api/v1/funcionarios
+
+### API FUNCIONÁRIO POST
+POST http://localhost:8080/api/v1/funcionarios
+Content-Type: application/json
+
+{
+    "nome": "Carlos Silva",
+    "cpf": "123.456.789-00",
+    "cargo": "Gerente",
+    "telefone": "+55 47 98765-4321",
+    "endereco": "Rua Exemplo, 123"
+}
+
+### API FUNCIONÁRIO PUT
+PUT http://localhost:8080/api/v1/funcionarios/1
+Content-Type: application/json
+
+{
+    "nome": "Carlos Silva Updated",
+    "cpf": "123.456.789-00",
+    "cargo": "Gerente Sênior",
+    "telefone": "+55 47 98765-4321",
+    "endereco": "Rua Exemplo, 123"
+}
+
+### API FUNCIONÁRIO DELETE
+DELETE http://localhost:8080/api/v1/funcionarios/1
