@@ -8,9 +8,10 @@ Content-Type: application/json
 {
     "nome": "Carlos Silva",
     "cpf": "123.456.789-00",
-    "cargo": "Gerente",
+    "email": "carlossilva@gmail.com",
     "telefone": "+55 47 98765-4321",
-    "endereco": "Rua Exemplo, 123"
+    "endereco": "Rua Exemplo, 123",
+    "cargo": "Gerente"
 }
 
 ### API FUNCIONÁRIO PUT
@@ -20,9 +21,10 @@ Content-Type: application/json
 {
     "nome": "Carlos Silva Updated",
     "cpf": "123.456.789-00",
-    "cargo": "Gerente Sênior",
+    "email": "carlossilva2@gmail.com",
     "telefone": "+55 47 98765-4321",
-    "endereco": "Rua Exemplo, 123"
+    "endereco": "Rua Exemplo, 123",
+    "cargo": "Gerente Sênior"
 }
 
 ### API FUNCIONÁRIO DELETE

@@ -15,8 +15,11 @@ public class Produto {
     private String fabricante;
     private String largura;
     private String perfil;
-    private String tamanhoAro;
     private String tipoConstrucao;
+    private String diametro; 
+    private double preco; 
+    private int quantidade; 
+    private String descricao; 
 
     @ManyToOne
     @JoinColumn(name = "cliente_id")
@@ -58,19 +61,43 @@ public class Produto {
         this.perfil = perfil;
     }
 
-    public String getTamanhoAro() {
-        return tamanhoAro;
-    }
-
-    public void setTamanhoAro(String tamanhoAro) {
-        this.tamanhoAro = tamanhoAro;
-    }
-
     public String getTipoConstrucao() {
         return tipoConstrucao;
     }
 
     public void setTipoConstrucao(String tipoConstrucao) {
         this.tipoConstrucao = tipoConstrucao;
+    }
+
+    public String getDiametro() {
+        return diametro;
+    }
+
+    public void setDiametro(String diametro) {
+        this.diametro = diametro;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 }
