@@ -1,6 +1,7 @@
 package br.univille.projfabsofttireshop.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,6 +31,13 @@ public class ClienteController {
 
         return new ResponseEntity<List<Cliente>>(listaClientes, 
                     HttpStatus.OK);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Cliente> buscarCliente(@PathVariable long id) {
+        Optional<Cliente> cliente = ClienteService.buscarPorId(id);
+        return cliente.map(ResponseEntity::ok)
+                          .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
     @PostMapping
     public ResponseEntity<Cliente>
