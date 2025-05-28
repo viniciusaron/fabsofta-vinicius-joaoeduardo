@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class FuncionarioService {
-  apiURL = "http://localhost:8080/api/v1/clientes";
+  apiURL = "http://localhost:8080/api/v1/funcionarios";
 
   constructor(private http:HttpClient) { }
 
