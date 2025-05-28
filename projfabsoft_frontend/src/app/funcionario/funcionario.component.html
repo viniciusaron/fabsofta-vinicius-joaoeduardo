@@ -1,6 +1,26 @@
 <main class="container">
     <h2>Funcionários</h2>
     <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
+                <th>Cargo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umFuncionario of listaFuncionarios">
+                <td>{{umFuncionario.nome}}</td>
+                <td>{{umFuncionario.cpf}}</td>
+                <td>{{umFuncionario.email}}</td>
+                <td>{{umFuncionario.telefone}}</td>
+                <td>{{umFuncionario.endereco}}</td>
+                <td>{{umFuncionario.cargo}}</td>
+            </tr>
+        </tbody>
 
     </table>
 </main>

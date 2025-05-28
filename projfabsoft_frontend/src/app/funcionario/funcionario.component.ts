@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
 import { Funcionario } from '../model/funcionario';
 import { FuncionarioService } from '../service/funcionario.service';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-funcionario',
-  imports: [],
+  imports: [HttpClientModule, CommonModule],
   templateUrl: './funcionario.component.html',
-  styleUrl: './funcionario.component.css'
+  styleUrl: './funcionario.component.css',
+  providers: [FuncionarioService]
 })
 export class FuncionarioComponent {
 
   public listaFuncionarios:Funcionario[] = [];
+  
   constructor(
     private funcionarioService:FuncionarioService
   ){}
