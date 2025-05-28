@@ -10,6 +10,6 @@ export class ClienteService {
   constructor(private http:HttpClient) { }
 
   getClientes(){
-    return this.http.get<cliente[]>(this.apiURL);
+    return this.http.get<Cliente[]>(this.apiURL);
   }
 }
