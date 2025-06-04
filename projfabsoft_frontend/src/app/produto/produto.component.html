@@ -1,0 +1,32 @@
+<main class="container">
+    <h2>Produtos</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Fabricante</th>
+                <th>Largura</th>
+                <th>Perfil</th>
+                <th>Tipo de Construcao</th>
+                <th>Diametro</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umProduto of listaProdutos">
+                <td>{{umProduto.id}}</td>
+                <td>{{umProduto.fabricante}}</td>
+                <td>{{umProduto.largura}}</td>
+                <td>{{umProduto.perfil}}</td>
+                <td>{{umProduto.tipoConstrucao}}</td>
+                <td>{{umProduto.diametro}}</td>
+                <td>{{umProduto.preco}}</td>
+                <td>{{umProduto.quantidade}}</td>
+                <td>{{umProduto.descricao}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</main>
