@@ -14,4 +14,8 @@ export class FuncionarioService {
   getFuncionarios(){
     return this.http.get<Funcionario[]>(this.apiURL);
   }
+  saveFuncionario(funcionario:Funcionario){
+    return this.http.post(this.apiURL,funcionario);
+  }
+
 }

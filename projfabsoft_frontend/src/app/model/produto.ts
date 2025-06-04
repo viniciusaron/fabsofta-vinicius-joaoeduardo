@@ -1,10 +1,10 @@
 export class Produto {
     id: number;
     fabricante: string;
-    largura: number;
-    perfil: number;
+    largura: string;
+    perfil: string;
     tipoConstrucao: string;
-    diametro: number;
+    diametro: string;
     preco: number;
     quantidade: number;
     descricao: string;
