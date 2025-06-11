@@ -15,7 +15,12 @@ export class FuncionarioService {
     return this.http.get<Funcionario[]>(this.apiURL);
   }
   saveFuncionario(funcionario:Funcionario){
+    if(funcionario.id){
+      return this.http.put(this.apiURL + '/' + funcionario.id, funcionario);
+    }
     return this.http.post(this.apiURL,funcionario);
   }
-
+  getFuncionarioById(id: any) {
+    return this.http.get<Funcionario>(this.apiURL + '/' + id);
+  }
 }

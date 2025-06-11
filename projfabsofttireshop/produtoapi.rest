@@ -13,7 +13,7 @@ Content-Type: application/json
     "diametro": "16",
     "preco": 250.00,
     "quantidade": 50,
-    "descricao": "Pneu para carro"
+    "descricao": "Pneu Esportivo"
 }
 
 ### API PRODUTO PUT
@@ -28,7 +28,7 @@ Content-Type: application/json
     "diametro": "17",
     "preco": 270.00,
     "quantidade": 40,
-    "descricao": "Pneu para carro SUV"
+    "descricao": "Pneu OffRoad"
 }
 
 ### API PRODUTO DELETE

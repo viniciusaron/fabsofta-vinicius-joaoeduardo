@@ -1,6 +1,6 @@
 <main class="container">
     <h2>Produtos</h2>
-    <a routerLink="/produtos/novo" class="btn btn-primary">Novo</a>
+    <a (click)="novo()" class="btn btn-primary">Novo</a>
     <table class="table">
         <thead>
             <tr>
@@ -26,6 +26,8 @@
                 <td>{{umProduto.preco}}</td>
                 <td>{{umProduto.quantidade}}</td>
                 <td>{{umProduto.descricao}}</td>
+                <td><a (click)="alterar(umProduto)"
+                    class="btn btn-secondary">Alterar</a></td>
             </tr>
         </tbody>
 

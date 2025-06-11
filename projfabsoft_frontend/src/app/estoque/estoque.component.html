@@ -1,13 +1,12 @@
 <main class="container">
     <h2>Estoque</h2>
-    <a routerLink="/estoque/novo" class="btn btn-primary">Novo</a>
+    <a (click)="novo()" class="btn btn-primary">Novo</a>
     <table class="table">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Fabricante</th>
                 <th>Descrição</th>
-                <th>Quantidade Total</th>
                 <th>Quantidade Vendido</th>
                 <th>Quantidade Disponível</th>
                 <th>Data da Última Reposição</th>
@@ -18,10 +17,9 @@
                 <td>{{umEstoque.id}}</td>
                 <td>{{umEstoque.fabricante}}</td>
                 <td>{{umEstoque.descricao}}</td>
-                <td>{{umFuncionario.}}</td>
-                <td>{{umFuncionario.telefone}}</td>
-                <td>{{umFuncionario.endereco}}</td>
-                <td>{{umFuncionario.cargo}}</td>
+                <td>{{umEstoque.quantidadeItensVendidos}}</td>
+                <td>{{umEstoque.quantidadeItensDisponivel}}</td>
+                <td>{{umEstoque.dataDaUltimaReposicao}}</td>
             </tr>
         </tbody>
 

@@ -3,26 +3,30 @@ import { Estoque } from '../model/estoque';
 import { EstoqueService } from '../service/estoque.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-estoque',
-  imports: [HttpClientModule, CommonModule, RouterLink],
+  imports: [HttpClientModule, CommonModule],
   templateUrl: './estoque.component.html',
   styleUrl: './estoque.component.css',
-  providers: [EstoqueService]
+  providers: [EstoqueService, Router]
 })
 export class EstoqueComponent {
 
   public listaEstoque:Estoque[] = [];
   
   constructor(
-    private estoqueService:EstoqueService
+    private estoqueService:EstoqueService,
+    private router:Router
   ){}
 
   ngOnInit(): void{
     this.estoqueService.getEstoque().subscribe(resposta => {
       this.listaEstoque = resposta;
     })
+  }
+  novo(){
+    this.router.navigate(['estoque/novo']);
   }
 }
