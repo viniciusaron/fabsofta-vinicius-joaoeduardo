@@ -1,0 +1,35 @@
+### API FORNECEDOR GET
+GET http://localhost:8080/api/v1/fornecedores
+
+### API FORNECEDOR POST
+POST http://localhost:8080/api/v1/fornecedores
+Content-Type: application/json
+
+{
+    "cnpj": "12345678000199",
+    "inscricaoEstadual": "123456789",
+    "razaoSocial": "Fornecedor LTDA",
+    "nomeFantasia": "Fornecedor Fantasia",
+    "telefone": "1234567890",
+    "uf": "SP",
+    "cep": "12345678",
+    "pais": "Brasil"
+}
+
+### API FORNECEDOR PUT
+PUT http://localhost:8080/api/v1/fornecedores/1
+Content-Type: application/json
+
+{
+    "cnpj": "98765432000188",
+    "inscricaoEstadual": "987654321",
+    "razaoSocial": "Fornecedor Atualizado LTDA",
+    "nomeFantasia": "Fornecedor Fantasia Atualizado",
+    "telefone": "0987654321",
+    "uf": "RJ",
+    "cep": "87654321",
+    "pais": "Brasil"
+}
+
+### API FORNECEDOR DELETE
+DELETE http://localhost:8080/api/v1/fornecedores/1

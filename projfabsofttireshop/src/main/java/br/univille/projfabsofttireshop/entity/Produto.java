@@ -29,6 +29,10 @@ public class Produto {
     @JoinColumn(name = "funcionario_id")
     private Funcionario funcionario;
 
+    @ManyToOne
+    @JoinColumn(name = "fornecedor_id")
+    private Fornecedor fornecedor;
+
     public long getId() {
         return id;
     }
