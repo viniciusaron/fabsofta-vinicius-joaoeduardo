@@ -4,6 +4,7 @@ import { ProdutoComponent } from './produto/produto.component';
 import { FormFuncionarioComponent } from './form-funcionario/form-funcionario.component';
 import { FormProdutoComponent } from './form-produto/form-produto.component';
 import { EstoqueComponent } from './estoque/estoque.component';
+import { FormEstoqueComponent } from './form-estoque/form-estoque.component';
 
 export const routes: Routes = [
     {path: 'funcionarios', component: FuncionarioComponent},
@@ -13,5 +14,5 @@ export const routes: Routes = [
     {path: 'produtos/novo', component: FormProdutoComponent},
     {path: 'produtos/alterar/:id', component: FormProdutoComponent},
     {path: 'estoque', component: EstoqueComponent},
-    //{path: 'estoque/novo', component: FormEstoqueComponent}
+    {path: 'estoque/novo', component: FormEstoqueComponent},
 ];

@@ -32,4 +32,7 @@ export class ProdutoComponent {
   alterar(produto:Produto){
       this.router.navigate(['produtos/alterar', produto.id]);
     }
+  visualizar(produto:Produto){
+      this.router.navigate(['produto/visualizar', produto.id]);
+  }
 }

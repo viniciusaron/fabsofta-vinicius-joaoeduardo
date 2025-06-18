@@ -6,6 +6,31 @@
                 <label for="txtNome">Nome</label>
                 <input type="text" [(ngModel)]="funcionario.nome" class="form-control" id="txtNome">
             </div>
+
+            <div class="form-group">
+                <label for="txtCpf">CPF</label>
+                <input type="text" [(ngModel)]="funcionario.cpf" class="form-control" id="txtCpf">
+            </div>
+
+            <div class="form-group">
+                <label for="txtEmail">E-mail</label>
+                <input type="text" [(ngModel)]="funcionario.email" class="form-control" id="txtEmail">
+            </div>
+
+            <div class="form-group">
+                <label for="txtTelefone">Telefone</label>
+                <input type="text" [(ngModel)]="funcionario.telefone" class="form-control" id="txtTelefone">
+            </div>
+
+            <div class="form-group">
+                <label for="txtEndereco">Endereço</label>
+                <input type="text" [(ngModel)]="funcionario.endereco" class="form-control" id="txtEndereco">
+            </div>
+
+            <div class="form-group">
+                <label for="txtCargo">Cargo</label>
+                <input type="text" [(ngModel)]="funcionario.cargo" class="form-control" id="txtCargo">
+            </div>
         </div>
 
         <button (click)="salvar()"

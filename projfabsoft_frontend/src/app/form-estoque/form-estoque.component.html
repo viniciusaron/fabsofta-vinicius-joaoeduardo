@@ -1,1 +1,38 @@
-<p>form-estoque works!</p>
+<main class="container">
+    <h2>Estoque</h2>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="txtFabricante">Fabricante</label>
+                <input type="text" [(ngModel)]="estoque.fabricante" class="form-control" id="txtFabricante">
+            </div>
+
+            <div class="form-group">
+                <label for="txtDescricao">Descrição</label>
+                <input type="text" [(ngModel)]="estoque.descricao" 
+                class="form-control" id="txtDescricao">
+            </div>
+    
+            <div class="form-group">
+                <label for="txtQuantidadeItensVendidos">Quantidade Vendido</label>
+                <input type="number" [(ngModel)]="estoque.quantidadeItensVendidos" 
+                class="form-control" id="txtQuantidadeItensVendidos">
+            </div>
+    
+            <div class="form-group">
+                <label for="txtQuantidadeItensDisponivel">Quantidade Disponível</label>
+                <input type="number" [(ngModel)]="estoque.quantidadeItensDisponivel" 
+                class="form-control" id="txtQuantidadeItensDisponivel">
+            </div>
+    
+            <div class="form-group">
+                <label for="txtDataDaUltimaReposicao">Data da Última Reposição</label>
+                <input type="date" [(ngModel)]="estoque.dataDaUltimaReposicao" 
+                class="form-control" id="txtDataDaUltimaReposicao">
+            </div>
+    
+            <button (click)="salvar()"
+                class="btn btn-primary">Salvar</button>
+        </div>
+    </div>
+</main>

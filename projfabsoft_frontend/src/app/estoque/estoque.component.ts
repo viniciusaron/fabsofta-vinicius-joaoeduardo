@@ -29,4 +29,7 @@ export class EstoqueComponent {
   novo(){
     this.router.navigate(['estoque/novo']);
   }
+  alterar(estoque:Estoque){
+        this.router.navigate(['estoque/alterar', estoque.id]);
+  }
 }

@@ -23,4 +23,7 @@ export class FuncionarioService {
   getFuncionarioById(id: any) {
     return this.http.get<Funcionario>(this.apiURL + '/' + id);
   }
+  excluirFuncionario(id: any){
+    return this.http.delete<Funcionario>(this.apiURL + '/' + id);
+  }
 }
