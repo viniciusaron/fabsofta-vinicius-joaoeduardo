@@ -36,4 +36,8 @@ export class FormEstoqueComponent {
             this.router.navigate(['estoque']);
           });
     }
+
+    sair(){
+      this.router.navigate(['estoque']);
+    }
 }

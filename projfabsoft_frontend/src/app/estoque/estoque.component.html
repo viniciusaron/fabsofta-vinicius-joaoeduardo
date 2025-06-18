@@ -10,6 +10,7 @@
                 <th>Quantidade Vendido</th>
                 <th>Quantidade Disponível</th>
                 <th>Data da Última Reposição</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -19,9 +20,9 @@
                 <td>{{umEstoque.descricao}}</td>
                 <td>{{umEstoque.quantidadeItensVendidos}}</td>
                 <td>{{umEstoque.quantidadeItensDisponivel}}</td>
-                <td>{{umEstoque.dataDaUltimaReposicao}}</td>
+                <td>{{umEstoque.dataDaUltimaReposicao | date:'dd/MM/yyyy'}}</td>
                 <td><a (click)="alterar(umEstoque)"
-                    class="btn btn-secondary">Alterar</a></td>
+                    class="btn btn-primary">Alterar</a></td>
             </tr>
         </tbody>
 

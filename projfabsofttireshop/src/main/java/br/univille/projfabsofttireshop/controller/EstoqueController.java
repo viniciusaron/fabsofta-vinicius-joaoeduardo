@@ -2,6 +2,7 @@ package br.univille.projfabsofttireshop.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,11 +13,8 @@ import br.univille.projfabsofttireshop.service.EstoqueService;
 @RequestMapping("/api/v1/estoque")
 public class EstoqueController {
 
-    private final EstoqueService estoqueService;
-
-    public EstoqueController(EstoqueService estoqueService) {
-        this.estoqueService = estoqueService;
-    }
+    @Autowired
+    private EstoqueService estoqueService;
 
     @GetMapping
     public List<Estoque> getAll() {

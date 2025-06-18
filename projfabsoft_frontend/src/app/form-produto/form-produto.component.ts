@@ -36,4 +36,8 @@ export class FormProdutoComponent {
             this.router.navigate(['produtos']);
           });
     }
+
+    sair(){
+      this.router.navigate(['produtos']);
+    }
 }

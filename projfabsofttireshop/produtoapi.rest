@@ -21,7 +21,7 @@ PUT http://localhost:8080/api/v1/produtos/1
 Content-Type: application/json
 
 {
-    "fabricante": "Goodyear Updated",
+    "fabricante": "Pirelli",
     "largura": "215",
     "perfil": "60",
     "tipoConstrucao": "Diagonal",

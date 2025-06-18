@@ -5,8 +5,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Temporal;
 
-import java.time.LocalDate;
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class Estoque {
@@ -23,8 +26,9 @@ public class Estoque {
     private int quantidadeItensVendidos;
     private int quantidadeItensDisponivel;
 
-    @Column(nullable = false)
-    private LocalDate dataDaUltimaReposicao;
+    @Temporal(jakarta.persistence.TemporalType.DATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date dataDaUltimaReposicao;
 
     public long getId() {
         return id;
@@ -66,11 +70,11 @@ public class Estoque {
         this.quantidadeItensDisponivel = quantidadeItensDisponivel;
     }
 
-    public LocalDate getDataDaUltimaReposicao() {
+    public Date getDataDaUltimaReposicao() {
         return dataDaUltimaReposicao;
     }
 
-    public void setDataDaUltimaReposicao(LocalDate dataDaUltimaReposicao) {
+    public void setDataDaUltimaReposicao(Date dataDaUltimaReposicao) {
         this.dataDaUltimaReposicao = dataDaUltimaReposicao;
     }
 }

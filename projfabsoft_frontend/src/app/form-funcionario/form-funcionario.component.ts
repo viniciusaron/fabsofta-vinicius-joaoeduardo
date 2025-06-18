@@ -36,4 +36,8 @@ export class FormFuncionarioComponent {
             this.router.navigate(['funcionarios']);
           });
     }
+
+    sair(){
+      this.router.navigate(['funcionarios']);
+    }
 }

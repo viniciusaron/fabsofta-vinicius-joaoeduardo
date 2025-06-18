@@ -33,13 +33,19 @@
             </div>
 
             <div class="form-group">
-                <label for="txtPreco">Quantidade</label>
-                <input type="text" [(ngModel)]="produto.preco" class="form-control" id="txtPreco">
+                <label for="txtQuantidade">Quantidade</label>
+                <input type="text" [(ngModel)]="produto.quantidade" class="form-control" id="txtQuantidade">
             </div>
+
+            <div class="form-group">
+                <label for="txtDescricao">Descrição</label>
+                <input type="text" [(ngModel)]="produto.descricao" class="form-control" id="txtDescricao">
+            </div>
+            
+            <button (click)="salvar()"
+                class="btn btn-primary">Salvar</button>
+            <button (click)="sair()"
+                class="btn btn-danger">Sair</button>
         </div>
-
-        <button (click)="salvar()"
-            class="btn btn-primary">Salvar</button>
-
     </div>
 </main>

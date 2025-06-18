@@ -31,10 +31,11 @@
                 <label for="txtCargo">Cargo</label>
                 <input type="text" [(ngModel)]="funcionario.cargo" class="form-control" id="txtCargo">
             </div>
+
+            <button (click)="salvar()"
+                class="btn btn-primary">Salvar</button>
+            <button (click)="sair()"
+                class="btn btn-danger">Sair</button>
         </div>
-
-        <button (click)="salvar()"
-            class="btn btn-primary">Salvar</button>
-
     </div>
 </main>
