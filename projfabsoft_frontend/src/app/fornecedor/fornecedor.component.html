@@ -1,0 +1,15 @@
+<main class="container">
+    <h2>Fornecedores</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>CNPJ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umFornecedor of listaFornecedores">
+                <td>{{umFornecedor.nomeFantasia}}</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
