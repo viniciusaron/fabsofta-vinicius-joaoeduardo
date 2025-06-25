@@ -1,0 +1,36 @@
+<main class="container">
+    <h2>Estoque</h2>
+    <a (click)="novo()" class="btn btn-primary">Novo</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Fornecedor<th>
+                <th>Descrição</th>
+                <th>Quantidade Vendido</th>
+                <th>Quantidade Disponível</th>
+                <th>Data da Última Reposição</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umEstoque of listaEstoque">
+                <td>{{umEstoque.id}}</td>
+                <td>{{umEstoque.fornecedor}}</td>
+                <td>{{umEstoque.descricao}}</td>
+                <td>{{umEstoque.quantidadeItensVendidos}}</td>
+                <td>{{umEstoque.quantidadeItensDisponivel}}</td>
+                <td>{{umEstoque.dataDaUltimaReposicao | date:'dd/MM/yyyy'}}</td>
+                <td><a (click)="alterar(umEstoque)"
+                    class="btn btn-primary">Alterar</a>
+                    &nbsp;
+                    <a (click)="visualizar(umEstoque)" 
+                    class="btn btn-primary">Visualizar</a>
+                    &nbsp;
+                    <a (click)="abrirConfirmacao(umEstoque)"
+                        class="btn btn-danger">Excluir</a>
+            </tr>
+        </tbody>
+
+    </table>
+</main>

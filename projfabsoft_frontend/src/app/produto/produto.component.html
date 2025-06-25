@@ -1,0 +1,56 @@
+<main class="container">
+    <h2>Produtos</h2>
+    <a (click)="novo()" class="btn btn-primary">Novo</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Fornecedor</th>
+                <th>Largura</th>
+                <th>Perfil</th>
+                <th>Tipo de Construcao</th>
+                <th>Diametro</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umProduto of listaProdutos">
+                <td>{{umProduto.id}}</td>
+                <td>{{umProduto.fornecedor}}</td>
+                <td>{{umProduto.largura}}</td>
+                <td>{{umProduto.perfil}}</td>
+                <td>{{umProduto.tipoConstrucao}}</td>
+                <td>{{umProduto.diametro}}</td>
+                <td>{{umProduto.preco}}</td>
+                <td>{{umProduto.quantidade}}</td>
+                <td>{{umProduto.descricao}}</td>
+                <td><a (click)="alterar(umProduto)"
+                    class="btn btn-primary">Alterar</a>
+                    &nbsp;
+                    <a (click)="abrirConfirmacao(umProduto)"
+                        class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</main>
+
+<div class="modal fade" #myModal tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Excluir produto</h5>
+            </div>
+            <div class="modal-body">
+            Confirma a exclusão do produto?
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="fecharConfirmacao()">Cancelar</button>
+            <button type="button" class="btn btn-primary" (click)="confirmarExclusao()">Sim</button>
+            </div>
+        </div>
+    </div>
+</div>

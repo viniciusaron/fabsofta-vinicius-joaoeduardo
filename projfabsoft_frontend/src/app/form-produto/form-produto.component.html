@@ -1,0 +1,51 @@
+<main class="container">
+    <h2>Produto</h2>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="txtFornecedor">Fornecedor</label>
+                <input type="text" [(ngModel)]="produto.fornecedor" class="form-control" id="txtFornecedor">
+            </div>
+
+            <div class="form-group">
+                <label for="txtLargura">Largura</label>
+                <input type="text" [(ngModel)]="produto.largura" class="form-control" id="txtLargura">
+            </div>
+
+            <div class="form-group">
+                <label for="txtPerfil">Perfil</label>
+                <input type="text" [(ngModel)]="produto.perfil" class="form-control" id="txtPerfil">
+            </div>
+
+            <div class="form-group">
+                <label for="txtTipoConstrucao">Tipo de Construção</label>
+                <input type="text" [(ngModel)]="produto.tipoConstrucao" class="form-control" id="txtTipoConstrucao">
+            </div>
+
+            <div class="form-group">
+                <label for="txtDiametro">Diametro</label>
+                <input type="text" [(ngModel)]="produto.diametro" class="form-control" id="txtDiametro">
+            </div>
+
+            <div class="form-group">
+                <label for="txtPreco">Preço</label>
+                <input type="text" [(ngModel)]="produto.preco" class="form-control" id="txtPreco">
+            </div>
+
+            <div class="form-group">
+                <label for="txtQuantidade">Quantidade</label>
+                <input type="text" [(ngModel)]="produto.quantidade" class="form-control" id="txtQuantidade">
+            </div>
+
+            <div class="form-group">
+                <label for="txtDescricao">Descrição</label>
+                <input type="text" [(ngModel)]="produto.descricao" class="form-control" id="txtDescricao">
+            </div>
+            
+            <button (click)="salvar()"
+                class="btn btn-primary">Salvar</button>
+            <button (click)="sair()"
+                class="btn btn-danger">Sair</button>
+        </div>
+    </div>
+</main>
