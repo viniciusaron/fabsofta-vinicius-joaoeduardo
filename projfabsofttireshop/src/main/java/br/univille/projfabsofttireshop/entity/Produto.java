@@ -13,7 +13,7 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     //@ManyToOne
-    //private Fabricante fabricante;
+    //private Fornecedor fornecedor;
     private String fabricante;
     private String largura;
     private String perfil;

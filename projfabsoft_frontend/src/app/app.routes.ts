@@ -22,6 +22,6 @@ export const routes: Routes = [
     {path: 'estoque/alterar/:id', component: FormEstoqueComponent},
     {path: 'clientes', component: ClienteComponent},
     {path: 'clientes/novo', component: FormClienteComponent},
-    {path: 'fornecedor', component: FornecedorComponent},
+    {path: 'fornecedores', component: FornecedorComponent},
 ];
 
