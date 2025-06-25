@@ -23,4 +23,8 @@ export class EstoqueService {
   getEstoqueById(id: any) {
     return this.http.get<Estoque>(this.apiURL + '/' + id);
   }
+
+  excluirEstoque(id: any) {
+    return this.http.delete<Estoque>(this.apiURL + '/' + id); 
+}
 }

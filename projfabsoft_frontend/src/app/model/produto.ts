@@ -1,6 +1,6 @@
 export class Produto {
     id: number;
-    fabricante: string;
+    fornecedor: string;
     largura: string;
     perfil: string;
     tipoConstrucao: string;

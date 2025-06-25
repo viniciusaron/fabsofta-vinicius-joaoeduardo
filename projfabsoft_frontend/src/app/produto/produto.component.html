@@ -5,7 +5,7 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Fabricante</th>
+                <th>Fornecedor</th>
                 <th>Largura</th>
                 <th>Perfil</th>
                 <th>Tipo de Construcao</th>
@@ -18,7 +18,7 @@
         <tbody>
             <tr *ngFor="let umProduto of listaProdutos">
                 <td>{{umProduto.id}}</td>
-                <td>{{umProduto.fabricante}}</td>
+                <td>{{umProduto.fornecedor}}</td>
                 <td>{{umProduto.largura}}</td>
                 <td>{{umProduto.perfil}}</td>
                 <td>{{umProduto.tipoConstrucao}}</td>
@@ -28,9 +28,6 @@
                 <td>{{umProduto.descricao}}</td>
                 <td><a (click)="alterar(umProduto)"
                     class="btn btn-primary">Alterar</a>
-                    &nbsp;
-                    <a (click)="visualizar(umProduto)" 
-                    class="btn btn-primary">Visualizar</a>
                     &nbsp;
                     <a (click)="abrirConfirmacao(umProduto)"
                         class="btn btn-danger">Excluir</a>

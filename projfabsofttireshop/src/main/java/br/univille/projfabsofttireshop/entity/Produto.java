@@ -12,6 +12,8 @@ public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    //@ManyToOne
+    //private Fabricante fabricante;
     private String fabricante;
     private String largura;
     private String perfil;

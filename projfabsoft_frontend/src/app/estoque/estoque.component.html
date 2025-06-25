@@ -5,7 +5,7 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Fabricante</th>
+                <th>Fornecedor<th>
                 <th>Descrição</th>
                 <th>Quantidade Vendido</th>
                 <th>Quantidade Disponível</th>
@@ -16,13 +16,19 @@
         <tbody>
             <tr *ngFor="let umEstoque of listaEstoque">
                 <td>{{umEstoque.id}}</td>
-                <td>{{umEstoque.fabricante}}</td>
+                <td>{{umEstoque.fornecedor}}</td>
                 <td>{{umEstoque.descricao}}</td>
                 <td>{{umEstoque.quantidadeItensVendidos}}</td>
                 <td>{{umEstoque.quantidadeItensDisponivel}}</td>
                 <td>{{umEstoque.dataDaUltimaReposicao | date:'dd/MM/yyyy'}}</td>
                 <td><a (click)="alterar(umEstoque)"
-                    class="btn btn-primary">Alterar</a></td>
+                    class="btn btn-primary">Alterar</a>
+                    &nbsp;
+                    <a (click)="visualizar(umEstoque)" 
+                    class="btn btn-primary">Visualizar</a>
+                    &nbsp;
+                    <a (click)="abrirConfirmacao(umEstoque)"
+                        class="btn btn-danger">Excluir</a>
             </tr>
         </tbody>
 

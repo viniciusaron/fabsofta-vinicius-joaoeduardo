@@ -1,6 +1,6 @@
 export class Estoque {
     id: number;
-    fabricante: string;
+    fornecedor: string;
     descricao: string;
     quantidadeItensVendidos: number;
     quantidadeItensDisponivel: number;

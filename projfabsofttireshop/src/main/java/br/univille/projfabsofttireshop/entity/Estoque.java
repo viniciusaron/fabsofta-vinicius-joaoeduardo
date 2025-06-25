@@ -18,7 +18,7 @@ public class Estoque {
     private long id;
 
     @Column(length = 100, nullable = false)
-    private String fabricante;
+    private String fornecedor;
 
     @Column(length = 1000, nullable = false)
     private String descricao;
@@ -38,12 +38,12 @@ public class Estoque {
         this.id = id;
     }
 
-    public String getFabricante() {
-        return fabricante;
+    public String getFornecedor() {
+        return fornecedor;
     }
 
-    public void setFabricante(String fabricante) {
-        this.fabricante = fabricante;
+    public void setFornecedor(String fornecedor) {
+        this.fornecedor = fornecedor;
     }
 
     public String getDescricao() {
