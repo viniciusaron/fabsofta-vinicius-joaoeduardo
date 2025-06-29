@@ -4,7 +4,7 @@ import { ClienteService } from '../service/cliente.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-form-cliente',
@@ -14,19 +14,30 @@ import { Router } from '@angular/router';
   providers: [ClienteService, Router]
 })
 export class FormClienteComponent {
-  cliente:Cliente = new Cliente()
+    cliente:Cliente = new Cliente();
 
-  constructor(
-    private clienteService:ClienteService,
-    private router:Router
-  ){}
+    constructor(
+      private clienteService:ClienteService,
+      private router:Router,
+      private activeRouter: ActivatedRoute
+    ){
+        const id = this.activeRouter.snapshot.paramMap.get('id');
 
-  salvar(){
-    this.clienteService.saveCliente(this.cliente)
-        .subscribe( res => {
-          this.router.navigate(['clientes']);
-        });
-  }
+        if (id) {
+          this.clienteService.getClientesById(id).subscribe(cliente => {
+            this.cliente = cliente;
+          });
+        }
+    }
 
+    salvar(){
+      this.clienteService.saveCliente(this.cliente)
+          .subscribe( res => {
+            this.router.navigate(['clientes']);
+          });
+    }
 
+    sair(){
+      this.router.navigate(['clientes']);
+    }
 }

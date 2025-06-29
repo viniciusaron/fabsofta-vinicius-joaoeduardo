@@ -9,6 +9,7 @@ import { FormEstoqueComponent } from './form-estoque/form-estoque.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { FormClienteComponent } from './form-cliente/form-cliente.component';
 import { FornecedorComponent } from './fornecedor/fornecedor.component';
+import { FormFornecedorComponent } from './form-fornecedor/form-fornecedor.component';
 
 export const routes: Routes = [
     {path: 'funcionarios', component: FuncionarioComponent},
@@ -21,7 +22,8 @@ export const routes: Routes = [
     {path: 'estoque/novo', component: FormEstoqueComponent},
     {path: 'estoque/alterar/:id', component: FormEstoqueComponent},
     {path: 'clientes', component: ClienteComponent},
-    {path: 'clientes/novo', component: FormClienteComponent},
+    {path: 'cliente/novo', component: FormClienteComponent},
     {path: 'fornecedores', component: FornecedorComponent},
+    {path: 'fornecedores/novo', component: FormFornecedorComponent},
 ];
 

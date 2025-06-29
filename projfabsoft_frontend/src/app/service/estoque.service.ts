@@ -26,5 +26,5 @@ export class EstoqueService {
 
   excluirEstoque(id: any) {
     return this.http.delete<Estoque>(this.apiURL + '/' + id); 
-}
+  }
 }

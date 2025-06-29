@@ -10,7 +10,7 @@ public interface ProdutoService {
     Optional<Produto> buscarPorId(long id);
     Produto salvar(Produto produto);
     void excluir(long id);
-    List<Produto> buscarPorFabricante(String fabricante);
+    List<Produto> buscarPorFornecedor(String fornecedor);
     List<Produto> buscarPorLargura(String largura);
     List<Produto> buscarPorPerfil(String perfil);
     List<Produto> buscarPorDiametro(String diametro);

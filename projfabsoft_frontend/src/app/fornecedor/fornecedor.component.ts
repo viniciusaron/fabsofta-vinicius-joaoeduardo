@@ -21,6 +21,7 @@ export class FornecedorComponent {
   private modal!: bootstrap.Modal;
 
   private fornecedorSelecionado!: Fornecedor;
+umFuncionario: any;
   
   constructor(
     private fornecedorService:FornecedorService,

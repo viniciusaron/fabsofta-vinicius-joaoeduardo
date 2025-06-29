@@ -36,8 +36,8 @@ public class ProdutoServiceImpl implements ProdutoService {
     }
 
     @Override
-    public List<Produto> buscarPorFabricante(String fabricante) {
-        return produtoRepository.findByFabricante(fabricante);
+    public List<Produto> buscarPorFornecedor(String fornecedor) {
+        return produtoRepository.findByFornecedor(fornecedor);
     }
 
     @Override

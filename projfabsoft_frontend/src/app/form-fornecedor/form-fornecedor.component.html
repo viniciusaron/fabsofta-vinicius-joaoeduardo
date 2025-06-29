@@ -1,0 +1,26 @@
+<main class="container">
+    <h2>Fornecedor</h2>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="txtCnpj">CNPJ</label>
+                <input type="text" [(ngModel)]="fornecedor.cnpj" class="form-control" id="txtCnpj">
+            </div>
+
+            <div class="form-group">
+                <label for="txtRazaoSocial">Razão Social</label>
+                <input type="text" [(ngModel)]="fornecedor.razaoSocial" class="form-control" id="txtRazaoSocial">
+            </div>
+
+            <div class="form-group">
+                <label for="txtNomeFantasia">Nome Fantasia</label>
+                <input type="text" [(ngModel)]="fornecedor.nomeFantasia" class="form-control" id="txtNomeFantasia">
+            </div>
+
+            <button (click)="salvar()"
+                class="btn btn-primary">Salvar</button>
+            <button (click)="sair()"
+                class="btn btn-danger">Sair</button>
+        </div>
+    </div>
+</main>

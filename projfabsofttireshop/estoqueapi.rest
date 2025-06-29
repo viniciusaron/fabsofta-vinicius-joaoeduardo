@@ -6,11 +6,11 @@ POST http://localhost:8080/api/v1/estoque
 Content-Type: application/json
 
 {
-    "fabricante": "Pirelli",
+    "fornecedor": "Pirelli",
     "descricao": "Pneu Esportivo",
     "quantidadeItensVendidos": 10,
     "quantidadeItensDisponivel": 50,
-    "dataDaUltimaReposicao": "2025-06-01"
+    "dataDaUltimaReposicao": "01-06-2025"
 }
 
 ### API ESTOQUE PUT
@@ -18,11 +18,11 @@ PUT http://localhost:8080/api/v1/estoque
 Content-Type: application/json
 
 {
-    "fabricante": "Michelin",
+    "fornecedor": "Michelin",
     "descricao": "Pneu OffRoad",
     "quantidadeItensVendidos": 15,
     "quantidadeItensDisponivel": 40,
-    "dataDaUltimaReposicao": "2025-06-10"
+    "dataDaUltimaReposicao": "01-06-2025"
 }
 
 ### API ESTOQUE DELETE
