@@ -1,0 +1,36 @@
+<main class="container">
+    <h2>Cliente</h2>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="txtNome">Nome</label>
+                <input type="text" [(ngModel)]="cliente.nome" class="form-control" id="txtNome">
+            </div>
+
+            <div class="form-group">
+                <label for="txtCpf">CPF</label>
+                <input type="text" [(ngModel)]="cliente.cpf" class="form-control" id="txtCpf">
+            </div>
+
+            <div class="form-group">
+                <label for="txtEmail">E-mail</label>
+                <input type="text" [(ngModel)]="cliente.email" class="form-control" id="txtEmail">
+            </div>
+
+            <div class="form-group">
+                <label for="txtTelefone">Telefone</label>
+                <input type="text" [(ngModel)]="cliente.telefone" class="form-control" id="txtTelefone">
+            </div>
+
+            <div class="form-group">
+                <label for="txtEndereco">Endereço</label>
+                <input type="text" [(ngModel)]="cliente.endereco" class="form-control" id="txtEndereco">
+            </div>
+
+            <button (click)="salvar()"
+                class="btn btn-primary">Salvar</button>
+            <button (click)="sair()"
+                class="btn btn-danger">Sair</button>
+        </div>
+    </div>
+</main>

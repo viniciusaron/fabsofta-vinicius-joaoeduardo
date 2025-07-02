@@ -5,6 +5,7 @@ import java.util.List;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -22,8 +23,8 @@ public class Cliente {
     private String telefone;
     private String endereco;
 
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private List<Produto> produtosComprados;
+    //@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    //private List<Produto> produtosComprados;
 
     public long getId() {
         return id;

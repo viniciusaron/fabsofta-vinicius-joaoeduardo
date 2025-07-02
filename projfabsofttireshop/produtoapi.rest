@@ -6,14 +6,14 @@ POST http://localhost:8080/api/v1/produtos
 Content-Type: application/json
 
 {
-    "fabricante": "Goodyear",
+    "fornecedor": "Goodyear",
     "largura": "205",
     "perfil": "55",
     "tipoConstrucao": "Radial",
     "diametro": "16",
     "preco": 250.00,
     "quantidade": 50,
-    "descricao": "Pneu para carro"
+    "descricao": "Pneu Esportivo"
 }
 
 ### API PRODUTO PUT
@@ -21,14 +21,14 @@ PUT http://localhost:8080/api/v1/produtos/1
 Content-Type: application/json
 
 {
-    "fabricante": "Goodyear Updated",
+    "fornecedor": "Pirelli",
     "largura": "215",
     "perfil": "60",
     "tipoConstrucao": "Diagonal",
     "diametro": "17",
     "preco": 270.00,
     "quantidade": 40,
-    "descricao": "Pneu para carro SUV"
+    "descricao": "Pneu OffRoad"
 }
 
 ### API PRODUTO DELETE

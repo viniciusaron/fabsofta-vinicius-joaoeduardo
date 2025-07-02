@@ -12,7 +12,9 @@ public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String fabricante;
+    //@ManyToOne
+    //private Fornecedor fornecedor;
+    private String fornecedor;
     private String largura;
     private String perfil;
     private String tipoConstrucao;
@@ -29,6 +31,10 @@ public class Produto {
     @JoinColumn(name = "funcionario_id")
     private Funcionario funcionario;
 
+    //@ManyToOne
+    //@JoinColumn(name = "fornecedor_id")
+    //private Fornecedor fornecedor;
+
     public long getId() {
         return id;
     }
@@ -37,12 +43,12 @@ public class Produto {
         this.id = id;
     }
 
-    public String getFabricante() {
-        return fabricante;
+    public String getFornecedor() {
+        return fornecedor;
     }
 
-    public void setFabricante(String fabricante) {
-        this.fabricante = fabricante;
+    public void setFornecedor(String fornecedor) {
+        this.fornecedor = fornecedor;
     }
 
     public String getLargura() {

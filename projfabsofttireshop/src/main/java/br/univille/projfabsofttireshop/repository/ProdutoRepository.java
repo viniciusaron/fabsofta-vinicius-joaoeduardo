@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {
-    List<Produto> findByFabricante(String fabricante);
+    List<Produto> findByFornecedor(String fornecedor);
     List<Produto> findByLargura(String largura);
     List<Produto> findByPerfil(String perfil);
     List<Produto> findByDiametro(String diametro);

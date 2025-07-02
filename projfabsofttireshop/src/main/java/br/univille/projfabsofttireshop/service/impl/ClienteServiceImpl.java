@@ -1,6 +1,7 @@
 package br.univille.projfabsofttireshop.service.impl;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import br.univille.projfabsofttireshop.entity.Cliente;
@@ -40,5 +41,15 @@ public class ClienteServiceImpl implements ClienteService {
         }
         return cliente;
     }
+
+    @Override
+    public Cliente buscarPorId(long id) {
+        var retorno = repository.findById(id);
+        if (retorno.isPresent())
+            return retorno.get();
+        return null;
+    }
+
+
 
 }
