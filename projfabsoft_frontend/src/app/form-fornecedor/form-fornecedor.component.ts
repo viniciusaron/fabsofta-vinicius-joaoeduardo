@@ -4,11 +4,11 @@ import { FornecedorService } from '../service/fornecedor.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-form-fornecedor',
-  imports: [HttpClientModule, CommonModule, FormsModule],
+  imports: [HttpClientModule, CommonModule, FormsModule, RouterModule],
   templateUrl: './form-fornecedor.component.html',
   styleUrl: './form-fornecedor.component.css',
   providers: [FornecedorService, Router]

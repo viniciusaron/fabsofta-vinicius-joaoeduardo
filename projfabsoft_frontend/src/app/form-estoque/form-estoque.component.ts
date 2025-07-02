@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
-  selector: 'app-form-produto',
+  selector: 'app-form-estoque',
   imports: [HttpClientModule, CommonModule, FormsModule],
   templateUrl: './form-estoque.component.html',
   styleUrl: './form-estoque.component.css',

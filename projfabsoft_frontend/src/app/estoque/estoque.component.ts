@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { Estoque } from '../model/estoque';
 import { EstoqueService } from '../service/estoque.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,7 +13,8 @@ import * as bootstrap from 'bootstrap';
   styleUrl: './estoque.component.css',
   providers: [EstoqueService, Router]
 })
-export class EstoqueComponent {
+
+export class EstoqueComponent implements OnInit {
 
   public listaEstoque:Estoque[] = [];
 
@@ -40,7 +41,7 @@ export class EstoqueComponent {
   }
 
   visualizar(estoque:Estoque){
-    this.router.navigate(['produtos', estoque.id]);
+    this.router.navigate(['produtos']);
   }
 
   abrirConfirmacao(estoque:Estoque) {
@@ -64,7 +65,7 @@ export class EstoqueComponent {
             );
         },
         error => {
-            console.error('Erro ao excluir funcionário:', error);
+            console.error('Erro ao excluir estoque:', error);
         }
     );
   }

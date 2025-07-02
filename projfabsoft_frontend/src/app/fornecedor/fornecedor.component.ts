@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { Fornecedor } from '../model/fornecedor';
 import { FornecedorService } from '../service/fornecedor.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,7 +13,7 @@ import * as bootstrap from 'bootstrap';
   styleUrl: './fornecedor.component.css',
   providers: [FornecedorService, Router]
 })
-export class FornecedorComponent {
+export class FornecedorComponent implements OnInit {
 
   public listaFornecedores:Fornecedor[] = [];
 
@@ -21,7 +21,6 @@ export class FornecedorComponent {
   private modal!: bootstrap.Modal;
 
   private fornecedorSelecionado!: Fornecedor;
-umFuncionario: any;
   
   constructor(
     private fornecedorService:FornecedorService,
@@ -33,9 +32,11 @@ umFuncionario: any;
       this.listaFornecedores = resposta;
     })
   }
+  
   novo(){
     this.router.navigate(['fornecedores/novo']);
   }
+  
   alterar(fornecedor:Fornecedor){
     this.router.navigate(['fornecedores/alterar', fornecedor.id]);
   }
