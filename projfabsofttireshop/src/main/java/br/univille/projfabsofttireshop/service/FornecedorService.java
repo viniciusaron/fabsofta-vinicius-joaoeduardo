@@ -7,6 +7,7 @@ import java.util.List;
 public interface FornecedorService {
     List<Fornecedor> getAll();
     Fornecedor save(Fornecedor fornecedor);
-    void delete(long id);
+    Fornecedor delete(long id);
     Fornecedor findById(long id);
+    Fornecedor getById(long id);
 }

@@ -1,19 +1,22 @@
 package br.univille.projfabsofttireshop.service.impl;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import br.univille.projfabsofttireshop.entity.Fornecedor;
 import br.univille.projfabsofttireshop.repository.FornecedorRepository;
 import br.univille.projfabsofttireshop.service.FornecedorService;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class FornecedorServiceImpl implements FornecedorService {
-    private final FornecedorRepository repository;
 
-    public FornecedorServiceImpl(FornecedorRepository repository) {
-        this.repository = repository;
+    @Autowired
+    private FornecedorRepository repository;
+
+    @Override
+    public Fornecedor save(Fornecedor fornecedor) {
+        return repository.save(fornecedor);
     }
 
     @Override
@@ -22,18 +25,29 @@ public class FornecedorServiceImpl implements FornecedorService {
     }
 
     @Override
-    public Fornecedor save(Fornecedor fornecedor) {
-        return repository.save(fornecedor);
+    public Fornecedor getById(long id) {
+        var retorno = repository.findById(id);
+        if(retorno.isPresent()){
+            return retorno.get();
+        }
+        return null;
     }
 
     @Override
-    public void delete(long id) {
-        repository.deleteById(id);
+    public Fornecedor delete(long id) {
+        var fornecedor = getById(id);
+        if(fornecedor != null){
+            repository.deleteById(id);
+        }
+        return fornecedor;
     }
 
     @Override
     public Fornecedor findById(long id) {
-        Optional<Fornecedor> fornecedor = repository.findById(id);
-        return fornecedor.orElse(null);
+        var retorno = repository.findById(id);
+        if (retorno.isPresent())
+            return retorno.get();
+        return null;
     }
 }
+

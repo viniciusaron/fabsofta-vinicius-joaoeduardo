@@ -1,13 +1,18 @@
 package br.univille.projfabsofttireshop.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import br.univille.projfabsofttireshop.entity.Cliente;
 import br.univille.projfabsofttireshop.entity.Estoque;
+import br.univille.projfabsofttireshop.entity.Produto;
 import br.univille.projfabsofttireshop.service.EstoqueService;
+
 
 @RestController
 @RequestMapping("/api/v1/estoque")
@@ -41,4 +46,6 @@ public class EstoqueController {
         estoqueService.delete(id);
         return ResponseEntity.noContent().build();
     }
+
+    
 }
