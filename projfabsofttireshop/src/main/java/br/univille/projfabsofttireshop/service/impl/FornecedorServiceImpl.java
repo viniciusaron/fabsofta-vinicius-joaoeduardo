@@ -16,7 +16,16 @@ public class FornecedorServiceImpl implements FornecedorService {
 
     @Override
     public Fornecedor save(Fornecedor fornecedor) {
-        return repository.save(fornecedor);
+        System.out.println("Salvando fornecedor: " + fornecedor.getCnpj() + " - " + fornecedor.getRazaoSocial());
+        try {
+            Fornecedor saved = repository.save(fornecedor);
+            System.out.println("Fornecedor salvo com sucesso. ID: " + saved.getId());
+            return saved;
+        } catch (Exception e) {
+            System.err.println("Erro ao salvar fornecedor: " + e.getMessage());
+            e.printStackTrace();
+            throw e;
+        }
     }
 
     @Override
